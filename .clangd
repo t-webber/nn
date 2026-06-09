@@ -27,7 +27,7 @@ CompileFlags:
     - -Wdouble-promotion
     - -Wvla
     - -Wstack-protector
-    - -std=c++14
+    - -std=c++17
     - -xc++
     - -Iobj_dir
     - -I/usr/share/verilator/include/

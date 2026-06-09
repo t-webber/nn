@@ -1,5 +1,5 @@
 VERILATOR ?= verilator
-VFLAGS    ?= --cc --exe --build -j 0 -Wall
+VFLAGS    ?= --cc --exe --build -j 0 -Wall -GN=2 -GP=7
 
 .PHONY: default run-% clean
 
