@@ -13,12 +13,10 @@ module neuron_layer #(
     always_comb begin
         for (int i = 0; i < N; i++) begin
             tmp = B[i];
-            for (int j = 0; j < P; j++) begin
-                for (int k = 0; k < P; k++) begin
-                    tmp += W[i][k] * A[k];
-                end
+            for (int k = 0; k < P; k++) begin
+                tmp += W[i][k] * A[k];
             end
-            Y[i] = tmp;
+            Y[i] = tmp >= 0 ? tmp : 0;
         end
 
     end
